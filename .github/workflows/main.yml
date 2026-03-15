@@ -36,6 +36,7 @@ jobs:
           echo test, and deploy your project.
           
       - name: Make gradle executable
+        working-directory: ./demo
         run: |
           echo Hello there!!!
           pwd
@@ -45,6 +46,7 @@ jobs:
           ./gradlew --version
       # Runs a gradle build and the tests
       - name: Gradle Build
+        working-directory: ./demo
         run: |
           ./gradlew build
           ./gradlew test
