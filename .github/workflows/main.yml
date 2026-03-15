@@ -34,7 +34,16 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-
+          
+      - name: Make gradle executable
+        run: |
+          echo Hello there!!!
+          pwd
+          ls
+          java -version
+          chmod +x gradlew
+          ./gradlew --version
+      # Runs a gradle build and the tests
       - name: Gradle Build
         run: |
           ./gradlew build
